@@ -1,19 +1,22 @@
-<!doctype html>
-<html class="no-js" lang="es">
-
+<!DOCTYPE html>
+<html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>
-        <?= $titulo ?>
-    </title>
-    <link rel="stylesheet" href="<?= base_url('publico/') ?>css/foundation.css" />
-    <link rel="stylesheet" href="<?= base_url('publico/') ?>css/sidebar.css" />
-    <link rel="stylesheet" href="<?= base_url('publico/') ?>css/app.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.css" />
-    <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
+  <title> <?=$titulo?></title>
+
+  <!-- Favicon -->
+  <link href="<?=base_url('publico/')?>/assets/img/brand/favicon.png" rel="icon" type="image/png">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+
+  <!-- Icons -->
+  <link href="<?=base_url('publico/')?>/assets/vendor/nucleo/css/nucleo.css" rel="stylesheet">
+  <link href="<?=base_url('publico/')?>/assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- Argon CSS -->
+  <link type="text/css" href="<?=base_url('publico/')?>/assets/css/argon.css" rel="stylesheet">
 </head>
-
 <body>

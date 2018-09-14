@@ -1,10 +1,10 @@
-<script src="<?= base_url('publico/') ?>js/vendor/jquery.js"></script>
-<script src="<?= base_url('publico/') ?>js/vendor/what-input.js"></script>
-<script src="<?= base_url('publico/') ?>js/vendor/foundation.min.js"></script>
-<script>
-    $(document).foundation();
-</script>
+ <!-- Core -->
+ <script src="<?=base_url('publico/')?>/assets/vendor/jquery/jquery.min.js"></script>
+  <script src="<?=base_url('publico/')?>/assets/vendor/popper/popper.min.js"></script>
+  <script src="<?=base_url('publico/')?>/assets/vendor/bootstrap/bootstrap.min.js"></script>
 
-</body>
+  <!-- Optional plugins -->
+  <script src="<?=base_url('publico/')?>/assets/vendor/PLUGIN_FOLDER/PLUGIN_SCRIPT.js"></script>
 
-</html>
+  <!-- Theme JS -->
+  <script src="<?=base_url('publico/')?>/assets/js/argon.js"></script>
