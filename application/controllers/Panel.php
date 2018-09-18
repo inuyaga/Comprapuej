@@ -16,9 +16,9 @@ class Panel extends CI_Controller
         $this->Head("Compraspuej | Panel");
         $this->NavBar();
         $this->load->view('Panel/panel.php');
-        $this->footer();
+        // $this->footer();
         $this->ScripYjquery();
-        $this->load->view('Panel/Incluir/fin_body');
+        $this->load->view('Incluir/fin_body');
 
     }
 
@@ -27,24 +27,24 @@ class Panel extends CI_Controller
     public function Head($titulo)
     {
         $data['titulo'] = $titulo;
-        $this->load->view('Panel/Incluir/head', $data);
+        $this->load->view('Incluir/head', $data);
     }
 
     public function NavBar()
     {
-        $this->load->view('Panel/Incluir/NavBar');
+        $this->load->view('Incluir/NavBar');
     }
     public function BarraLateral()
     {
-        $this->load->view('Panel/Incluir/BarraLateral');
+        $this->load->view('Incluir/BarraLateral');
     }
     public function footer()
     {
-        $this->load->view('Panel/Incluir/footer');
+        $this->load->view('Incluir/footer');
     }
     public function ScripYjquery()
     {
-        $this->load->view('Panel/Incluir/scriptYjquery');
+        $this->load->view('Incluir/scriptYjquery');
     }
     ///////////////////////////////////////////////////////////////////////////////////////////
 
