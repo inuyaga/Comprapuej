@@ -4,38 +4,62 @@ if ($this->session->flashdata('mensaje')) {
 }
 ?>
 
-<form action="<?= base_url('Panel/nuevo_producto_save') ?>" method="POST" enctype="multipart/form-data">
-    <div class="grid-container">
-        <div class="grid-x grid-padding-x">
-            <div class="medium-4 cell">
-                <label>Nombre
-                    <input type="text" placeholder="Nombre" name="nombre_prod" required>
-                </label>
+
+
+<div class="container">
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Principal</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Nuevo producto</li>
+        </ol>
+    </nav>
+    <form action="<?= base_url('Panel/nuevo_producto_save') ?>" method="POST" enctype="multipart/form-data">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Nombre" type="text" name="nombre_prod" required>
+                    </div>
+                </div>
             </div>
-            <div class="medium-4 cell">
-                <label>Descripcion del producto
-                    <input type="text" placeholder="Descripcion del producto" name="descripcion" required>
-                </label>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Precio reposicion" type="text" name="precio_reposicion"
+                            required>
+                    </div>
+                </div>
             </div>
-            <div class="medium-4 cell">
-                <label>Cantidad
-                    <input type="number" placeholder="Cantidad" name="cantidad" required>
-                </label>
+            <div class="col-md-4">
+                <div class="form-group">
+                    <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Search" type="file" name="imagen_prod" required>
+                    </div>
+                </div>
             </div>
-            <div class="medium-4 cell">
-                <label>Precio reposicion
-                    <input type="number" placeholder="Precio reposicion" name="precio_reposicion" required>
-                </label>
+            <div class="col-md-8">
+                <div class="form-group">
+                    <div class="input-group mb-4">
+                        <div class="input-group-prepend">
+                            <span class="input-group-text"><i class="ni ni-zoom-split-in"></i></span>
+                        </div>
+                        <input class="form-control" placeholder="Descripcion del producto" type="text" name="descripcion"
+                            required>
+                    </div>
+                </div>
             </div>
-            <div class="medium-4 cell">
-                <br>
-                    <label for="exampleFileUpload" class="button">Imagen</label>
-                    <input type="file" id="exampleFileUpload" class="show-for-sr" name="imagen_prod" required>
-            </div>
-            <div class="medium-4 cell">
-                <br>
-                <button class="hollow button success" href="#">Guardar</button>
+
+            <div class="col-md-4">
+                <button type="submit" class="btn btn-outline-primary">Guardar</button>
             </div>
         </div>
-    </div>
-</form>
+    </form>

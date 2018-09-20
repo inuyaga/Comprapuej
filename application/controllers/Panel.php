@@ -131,12 +131,12 @@ class Panel extends CI_Controller
             $error = array('error' => $this->upload->display_errors());
 
             $this->session->set_flashdata('mensaje', '
-            <div class="callout alert" data-closable>
-                <h5>Error</h5>
-                <p>' . $this->upload->display_errors() . '</p>
-            <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-                <span aria-hidden="true">&times;</span>
-            </button>
+            <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+                <span class="alert-inner--text"><strong>Error!</strong> ' . $this->upload->display_errors() . '</span>
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
             ');
             redirect('panel/newProducto', 'refresh');
@@ -155,11 +155,11 @@ class Panel extends CI_Controller
 
             if ($query > 0) {
                 $this->session->set_flashdata('mensaje', '
-               <div class="callout success" data-closable="slide-out-right">
-                  <h5>ok</h5>
-                    <p>Producto guardado con exito</p>
-                    <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-                    <span aria-hidden="true">&times;</span>
+                <div class="alert alert-success alert-dismissible fade show" role="alert">
+                    <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+                    <span class="alert-inner--text"><strong>Ok!</strong> Producto guardado con exito!</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                ');
@@ -167,12 +167,12 @@ class Panel extends CI_Controller
                 redirect('panel/newProducto', 'refresh');
             } else {
                 $this->session->set_flashdata('mensaje', '
-                <div class="callout alert" data-closable>
-                    <h5>Error</h5>
-                    <p>Error al intentar guardar</p>
-                <button class="close-button" aria-label="Dismiss alert" type="button" data-close>
-                    <span aria-hidden="true">&times;</span>
-                </button>
+                <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                    <span class="alert-inner--icon"><i class="ni ni-like-2"></i></span>
+                    <span class="alert-inner--text"><strong>Error!</strong> Error al intentar guardar!</span>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 ');
                 redirect('panel/newProducto', 'refresh');

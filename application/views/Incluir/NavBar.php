@@ -1,6 +1,6 @@
 <nav id="navbar-main" class="navbar navbar-expand-lg navbar-dark bg-default">
   <div class="container">
-    <a class="navbar-brand mr-lg-5" href="./index.html">
+    <a class="navbar-brand mr-lg-5" href="<?=base_url()?>">
       <img src="<?=base_url('publico/imagenes/')?>compr.png">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar_global" aria-controls="navbar_global"
@@ -71,7 +71,7 @@
             <span class="nav-link-inner--text">Usuarios</span>
           </a>
           <div class="dropdown-menu">
-            <a href="./examples/login.html" class="dropdown-item">Inicio</a>
+            <a href="<?=base_url('inicio')?>" class="dropdown-item">Inicio</a>
             <a href="./examples/register.html" class="dropdown-item">Registrar</a>
           </div>
         </li>
@@ -107,17 +107,25 @@
             <span class="nav-link-inner--text">Download</span>
           </a>
         </li> -->
-
-        <li class="nav-item dropdown">
+<?php
+if ($this->session->userdata('login') == true) {?>
+<li class="nav-item dropdown">
           <a href="#" class="nav-link" data-toggle="dropdown" href="#" role="button">
             <i class="ni ni-collection d-lg-none"></i>
-            <span class="nav-link-inner--text">Usuario</span>
+            <span class="nav-link-inner--text"><?=$this->session->userdata('nombre')?></span>
           </a>
           <div class="dropdown-menu">
-            <a href="./examples/login.html" class="dropdown-item">Inicio</a>
-            <a href="./examples/register.html" class="dropdown-item">Registrar</a>
+            <?php if ($this->session->userdata('tipo_user') == 0) {?>
+              <a href="<?=base_url('Panel/newProducto')?>" class="dropdown-item">Nuevo producto</a>
+              <a href="./examples/login.html" class="dropdown-item">Categoria</a>
+              <a href="./examples/login.html" class="dropdown-item">sub categoria</a>
+            <?php }?>
+            <a href="<?=base_url('Inicio/cerrar_sesion')?>" class="dropdown-item">salir</a>
           </div>
         </li>
+<?php }
+?>
+
 
       </ul>
     </div>
